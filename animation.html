@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        #view{
+            border: solid 2px;
+            margin-bottom: 10px;
+            background: darkgrey;
+        }
+        body{
+            background: royalblue;
+        }
+        img{
+            width: 250px;
+        }
+        .shakeCSS{
+            animation: shakeItBaby 0.1s infinite;
+        }
+        @keyframes shakeItBaby{
+            25%{
+                transform: translateX(-10px)
+            }
+            75%{
+                transform: translateX(10px)
+            }
+        }
+        .moveCSS{
+            animation: moveItBaby 1.5s infinite linear;
+        }
+        @keyframes moveItBaby{
+            to{
+                transform: translateX(100vw)
+            }
+        }
+        .fadeCSS{
+            animation: fadeItBaby 1s infinite;
+            animation-timing-function: ease-in;
+        }
+        @keyframes fadeItBaby{
+            50%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        .jumpCSS{
+            animation: jumpItBaby 1s infinite;
+        }
+        @keyframes jumpItBaby{
+            30%{
+                transform: translateY(-80px)
+            }
+            100%{
+                transform: translateY(0px)
+            }
+        }
+        .fallCSS{
+            animation: fallItBaby .65s linear;
+        }
+        @keyframes fallItBaby{
+            70%{
+                transform: rotate(90deg) translateX(110px) translateY(-90px);
+            }
+            100%{
+                transform: rotate(90deg) translateX(110px) translateY(-90px);
+            }
+        }
+        .moveInCSS{
+            animation: moveInAnimation 1.2s ease-out forwards;
+        }
+        @keyframes moveInAnimation{
+            0%{
+                transform: translateX(-420px);
+            }
+            to{
+                transform: translateX(30vw);
+            }
+        }
+        .talkCSS{
+            animation: talkAnimation 0.2s infinite;
+        }
+        @keyframes talkAnimation{
+            25%{
+                transform: translateY(-4px)
+            }
+            75%{
+                transform: translateY(4px)
+            }
+        }
+        .mirrorCSS{
+            animation: mirrorAnimation .5s forwards;
+        }
+        @keyframes mirrorAnimation{
+            to{
+                transform: rotateY(180deg);
+            }
+        }
+        .spinCSS{
+            animation: spinAnimation 1s infinite linear;
+        }
+        @keyframes spinAnimation{
+            25%{
+                transform: rotate(90deg);
+            }
+            50%{
+                transform: rotate(180deg);
+            }
+            75%{
+                transform: rotate(270deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .randomCSS{
+            animation: randomAnimation 3s infinite;
+        }
+        @keyframes randomAnimation{
+            10%{
+                transform: rotateY(180deg);
+            }
+            35%{
+                transform: rotateY(180deg) translateX(-50vw);
+            }
+            85%{
+                transform: scale(7);
+            }
+            100%{
+                transform: scale(1) translateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="view">
+    <img src="hero.png" class="kappa">
+    </div>
+    <div>
+        <button id="shake">Shake</button>
+        <button id="move">Move</button>
+        <button id="fade">Fade</button>
+        <button id="jump">Jump</button>
+        <button id="fall">Fall Down</button>
+        <button id="moveIn">Move in once</button>
+        <button id="talk">Talk</button>
+        <button id="mirror">Mirror me!</button>
+        <button id="spin">Make me dizzy</button>
+        <button id="random">???</button>
+    </div>
+    <script src="animationscript.js"></script>
+</body>
+</html>
